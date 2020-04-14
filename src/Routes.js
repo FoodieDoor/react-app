@@ -7,12 +7,12 @@ import * as Views from './views';
 import SimpleLayout from './views/layouts/SimpleLayout';
 
 const LoadableHome = Loadable({
-  loader: () => import('./views/home/Home'),
+  loader: () => import(/* webpackChunkName: 'home' */ './views/home/Home'),
   loading: () => <div>Loading...</div>, // eslint-disable-line
 });
 
 const LoadableAbout = Loadable({
-  loader: () => import('./views/about/About'),
+  loader: () => import(/* webpackChunkName: 'about' */ './views/about/About'),
   loading: () => <div>Loading...</div> // eslint-disable-line
 });
 
